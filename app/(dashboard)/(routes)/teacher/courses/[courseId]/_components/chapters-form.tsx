@@ -20,6 +20,7 @@ import { Button } from "@/components/ui/button";
 import { Chapter, Course } from "@prisma/client";
 import { cn } from "@/lib/utils";
 import { Input } from "@/components/ui/input";
+import { ChaptersList } from "./chapters-list";
 
 const formSchema = z.object({
   title: z.string().min(1),
@@ -110,6 +111,11 @@ export const ChaptersForm = ({ initialData, courseId }: ChaptersFormProps) => {
           )}
         >
           {!initialData.chapters.length && "No chapters"}
+          <ChaptersList
+            onEdit={() => {}}
+            onReorder={() => {}}
+            items={initialData.chapters || []}
+          />
         </div>
       )}
       {!isCreating && (
