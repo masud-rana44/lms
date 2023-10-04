@@ -4,6 +4,7 @@ import { redirect } from "next/navigation";
 import { db } from "@/lib/db";
 import { CourseWithChapterWithProgress } from "@/types";
 import { CourseSidebarItem } from "./course-sidebar-item";
+import { CourseProgress } from "@/components/course-progress";
 
 interface CourseSidebarProps {
   course: CourseWithChapterWithProgress;
@@ -33,7 +34,11 @@ export const CourseSidebar = async ({
     <div className="h-full border-r flex flex-col overflow-y-auto shadow-sm">
       <div className="p-8 flex flex-col b border-b">
         <h1 className="font-semibold">{course.title}</h1>
-        {/* TODO: course progress bar */}
+        {purchase && (
+          <div className="mt-10">
+            <CourseProgress variant="success" value={progressCount} />
+          </div>
+        )}
       </div>
       <div className="flex flex-col w-full overflow-hidden">
         {course.chapters.map((chapter) => (
