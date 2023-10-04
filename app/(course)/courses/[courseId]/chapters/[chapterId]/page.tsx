@@ -52,7 +52,7 @@ const ChapterIdPage = async ({
           label="You need to purchase this course to watch this chapter."
         />
       )}
-      <div className="flex flex-col max-w-4xl mx-auto pb-20">
+      <div className="flex flex-col max-w-4xl mx-auto pb-12">
         <div className="p-4">
           <VideoPlayer
             chapterId={params.chapterId}
@@ -93,7 +93,7 @@ const ChapterIdPage = async ({
                     className="flex items-center p-3 w-full bg-sky-200 border text-sky-700 rounded-md hover:underline"
                   >
                     <File />
-                    <p>{attachment.name}</p>
+                    <p className="line-clamp-1">{attachment.name}</p>
                   </a>
                 ))}
               </div>
