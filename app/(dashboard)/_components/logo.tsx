@@ -10,7 +10,7 @@ export const Logo = () => {
         src="/logo.svg"
         className="cursor-pointer"
       />
-      <h1 className="font-bold text-xl text-[#2880b0]">Knowledge War</h1>
+      <h1 className="font-bold text-xl text-[#2880b0]">Knowledge Wave</h1>
     </div>
   );
 };
