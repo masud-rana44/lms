@@ -41,6 +41,7 @@ export const CourseCard = ({
               <span>
                 {chaptersLength} {chaptersLength === 1 ? "Chapter" : "Chapters"}
               </span>
+              <span></span>
             </div>
           </div>
           {progress !== null ? (
