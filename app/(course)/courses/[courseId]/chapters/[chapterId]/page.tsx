@@ -88,13 +88,15 @@ const ChapterIdPage = async ({
                 <h4 className="font-medium">{profile.name}</h4>
               </div>
             </div>
-            <div className="flex flex-col ">
-              <div className="flex gap-x-2">
+            <div className="flex flex-col space-y-1">
+              <div className="flex items-center gap-x-2">
                 <StarRating rating={profile.rating} />
+                {"("}
                 <div className="flex flex-row">
                   <p>{profile.rating}</p>
                   {"/5"}
                   <EmojiRating rating={profile.rating} />
+                  {")"}
                 </div>
               </div>
               {purchase ? (
