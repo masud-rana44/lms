@@ -16,8 +16,11 @@ const CourseIdPage = async ({ params }: { params: { courseId: string } }) => {
           position: "asc",
         },
       },
+      // userId: true,
     },
   });
+
+  console.log({ course });
 
   if (!course) {
     return redirect("/");
