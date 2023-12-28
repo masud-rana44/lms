@@ -43,6 +43,8 @@ const ChapterIdPage = async ({
     return redirect("/");
   }
 
+  console.log(course);
+
   const isLocked = !chapter.isFree && !purchase;
   const completeOnEnd = !!purchase && !userProgress?.isCompleted;
   const profile = profiles[Number.parseInt(Math.random() * 15 + "")];
@@ -83,7 +85,7 @@ const ChapterIdPage = async ({
                   alt="Creator avatar"
                   height={40}
                   width={40}
-                  className="rounded-full border-2"
+                  className="h-10 w-10 rounded-full border-2 object-cover"
                 />
                 <h4 className="font-medium">{profile.name}</h4>
               </div>
