@@ -124,6 +124,7 @@ export const ChaptersForm = ({ initialData, courseId }: ChaptersFormProps) => {
             <Button type="submit" disabled={!isValid || isSubmitting}>
               Create
             </Button>
+            <></>
           </form>
         </Form>
       )}
